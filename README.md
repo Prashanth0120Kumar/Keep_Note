@@ -2,7 +2,7 @@ Certainly, here's a more detailed description that you can use for your README f
 
 # Keep-Note Web App
 
-The Keep-Note Web App is a single-page application developed using Angular that empowers users to efficiently manage and maintain their notes. This project has been developed through several stages, with the current focus being on Stage 8.
+The Keep-Note Web App is a single-page application developed using Angular that empowers users to efficiently manage and maintain their notes. This project has been developed through several stages.
 
 
 ### Key Features and Enhancements
