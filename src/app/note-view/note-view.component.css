@@ -1,0 +1,54 @@
+.card-body
+{
+    /* box-shadow: 3px 3px 3px 3px black; */
+    width: 250px;
+    height:250px;
+    margin:40px;
+    padding: 10px;
+    background-color: white;
+}
+.card
+{
+    display: inline-flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+.title
+{
+    position: relative;
+    top:-15px;
+}
+.date
+{
+    color:gray;
+    position: relative;
+    top:-15px;
+}
+.content
+{
+    position: relative;
+    top:-10px;
+}
+.category
+{
+    position: relative;
+    top:-5px;
+}
+.btn
+{
+    margin-left: 37cm;
+    position: relative;
+    top:-35px;
+}
+.edit
+{
+    position:relative;
+    left:70px;
+    top:-45px
+}
+
+.icons
+{
+    display: flex;
+    margin-left: 40px;
+}

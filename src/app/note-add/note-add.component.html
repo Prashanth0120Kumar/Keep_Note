@@ -1,0 +1,43 @@
+<mat-card class="custom-card">
+  <mat-card-content>
+    <form (ngSubmit)="addNotes()" #notesForm="ngForm" class="custom-form">
+      <mat-form-field>
+        <input matInput placeholder="Title" [(ngModel)]="notes.title" name="title" required #titleField="ngModel">
+        <mat-error *ngIf="titleField.invalid && (titleField.dirty || titleField.touched)">Note title is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea matInput placeholder="Content" [(ngModel)]="notes.content" name="content" required minlength="5" #contentField="ngModel"></textarea>
+        <mat-error *ngIf="contentField.invalid && (contentField.dirty || contentField.touched)">
+          Note content is required and should have a minimum of 5 characters
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="date" placeholder="Reminder Date" [(ngModel)]="notes.reminderDate" name="reminderDate" required #reminderDateField="ngModel">
+        <mat-error *ngIf="reminderDateField.invalid && (reminderDateField.dirty || reminderDateField.touched)">Reminder date is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" placeholder="Category" [(ngModel)]="notes.category" name="category">
+      </mat-form-field>
+
+      <div id="label">
+        <label>Priority</label>
+        <mat-radio-group name="priority" [(ngModel)]="notes.priority" required #priorityField="ngModel">
+          <mat-radio-button value="low">Low</mat-radio-button>
+          <mat-radio-button value="medium">Medium</mat-radio-button>
+          <mat-radio-button value="high">High</mat-radio-button>
+          <mat-radio-button value="critical">Critical</mat-radio-button>
+        </mat-radio-group>
+        <mat-error *ngIf="priorityField.invalid && (priorityField.dirty || priorityField.touched)">
+          Value should be one among the 4 values - Low, Medium, High, or Critical
+        </mat-error>
+      </div>
+
+      <button mat-icon-button color="primary" type="submit">
+        <mat-icon>save</mat-icon>
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>

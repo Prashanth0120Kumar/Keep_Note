@@ -1,0 +1,16 @@
+.searchBar
+{
+    text-align: center;
+    padding: 20px;
+}
+.form-control
+{
+    width: 8cm;
+    border: 0;
+    border-bottom: 1px solid black;
+}
+.btn
+{
+    border: 0;
+    border-bottom: 1px solid black;
+}

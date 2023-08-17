@@ -1,0 +1,45 @@
+<app-note-search (noteSearch)="searchNote($event)"></app-note-search>
+
+<div class="card" *ngFor="let note of note">
+  <a  class="card-body">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="title">{{ note.title }}
+          <button color="accent" *ngIf="note?.priority==='Critical'" mat-icon-button>
+            <mat-icon>gpp_maybe</mat-icon>
+          </button>
+          <button *ngIf="note?.priority==='High'" color="accent" mat-icon-button>
+            <mat-icon>arrow_circle_up</mat-icon>
+          </button>
+          <button *ngIf="note?.priority==='Medium'" color="accent" mat-icon-button>
+            <mat-icon>remove_circle_outline</mat-icon>
+          </button>
+          <button *ngIf="note?.priority==='Low'" color="accent" mat-icon-button>
+            <mat-icon>arrow_circle_down</mat-icon>
+          </button>
+        </mat-card-title>
+        <mat-card-subtitle class="date">{{ note.reminderDate }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="content">{{ note.content }}</p>
+        <p>
+          <mat-chip-listbox aria-label="Fish selection">
+            <mat-chip-option class="category">{{ note.category }}</mat-chip-option>
+          </mat-chip-listbox>
+        </p>
+      </mat-card-content>
+      <div class="icons">
+        <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon" class="edit" routerLink="/note-edit/{{note?.id}}">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon" class="edit" (click)="deleteNote(note.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+      </div>
+
+    </mat-card>
+  </a>
+</div>
+<button mat-icon-button color="accent" aria-label="Example icon button with a menu icon" class="btn" routerLink="/note-add">
+  <mat-icon>add</mat-icon>
+</button>

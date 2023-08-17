@@ -1,0 +1,37 @@
+.main
+{
+    margin-right: 190px;
+}
+.custom-card {
+    width: 300px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-card mat-card-header {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    width: 150%;
+  }
+  
+  .custom-card input {
+    width: 200%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 12px; 
+    margin: 8px 0; 
+    border: 0;
+    border-bottom: 1px solid black;
+  }
+  
+  .custom-card .save-button {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  

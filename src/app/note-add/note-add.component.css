@@ -1,0 +1,30 @@
+/* styles.css */
+
+.custom-card {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-form mat-form-field {
+    margin-right: 15px;
+    
+  }
+  .custom-form input
+  {
+    border: 0;
+    border-bottom: 1px solid black;
+  }
+
+  .custom-form textarea
+  {
+    border: 0;
+    border-bottom: 1px solid black;
+  }
+  
+  .custom-form mat-radio-group {
+    margin-top: 10px;
+  }
+  
